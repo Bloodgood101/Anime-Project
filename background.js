@@ -25,7 +25,7 @@ function startAnime() {
       const parser = new DOMParser();
       //doc stores our webpage we are temporarily searching
       const doc = parser.parseFromString(html, "text/html");
-      //finds links
+      //finds links on html file
       const links = doc.querySelectorAll('a');
 
       //Goes through all the links in the page, doesn't matter if the search is linear since the best option is the first one so O(1)
