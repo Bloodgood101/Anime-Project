@@ -18,4 +18,13 @@ function startAnime() {
   //Our torrent website
   let url = 'https://1337x.to/search/'+animeNameUrl+'/1/';
   window.open(url, '_blank');
+
+  //Get all the links from the website
+  var links = document.getElementsByTagName("a");
+  for(var i=0, max=links.length; i<max; i++) {
+    if (links[i].href.includes(animeName)) {
+        //Download the torrent file
+        window.open(links[i].href, '_blank');
+    }
+  }
 }
