@@ -2,3 +2,7 @@ h1 {
     color: darkred;
     align-items: center;
 }
+
+.button-container {
+  display: flex;
+}

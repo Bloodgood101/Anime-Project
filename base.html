@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html> 
     <head>
-        <script type="text/javascript" src="background.js" defer></script> 
+        <!script type="text/javascript" src="testing.js" defer><!/script>
     </head>
     <body>
-        <h1>Welcome back you weeb</h1>
+        <h1>Welcome back you bot</h1>
+        <p><i>(Lowercase only)</i></p>
         <p></p>
-        <label for="anime">What anime is it this time?</label>
-        <input type="text" id="anime" placeholder="Enter peak fiction...">
-        <p></p>
-        <button type="button" id="startButton">Start?!</button>
-        <p>Anime downloaded: </p>
-        <div id="confirmation"></div>
+
+        <form id="searchForm">
+            <input type="text" id="searchTerm" placeholder="Search..." required>
+            <select id="mediaType">
+                <option value="manga">Manga</option>
+                <option value="movie">Movie</option>
+                <option value="tv">TV show</option>
+                <option value="anime">Anime</option>
+                <option value="game">Game</option>
+                <option value="other">Other</option>
+                <option value="trophy-hunting">Trophy Hunting</option>
+            </select>
+            <p></p>
+            <button type="submit">GO</button>
+            <button id="clearHistory">Clear History</button>
+        </form>
+        <div id="history"></div>
+        <script type="text/javascript" src="background.js" defer></script>
     </body>
 </html>

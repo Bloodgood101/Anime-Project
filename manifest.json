@@ -1,11 +1,11 @@
 {
     "manifest_version": 3,
     "name": "Anime Finesse",
-    "description": "Place to download anime placed in a wishlist, by using an extension",
-    "permissions": ["tabs"], 
+    "description": "Place to access any tangible media or shopping items with the click of a button, saves search history for sharing",
     "version": "1.0",
     "action": {
         "default_popup": "base.html",
         "default_icon": "sakuragi.png"
-    }
+    },
+    "permissions": ["storage"]
 }
