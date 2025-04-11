@@ -26,14 +26,27 @@ const mediaType = document.getElementById('mediaType').value;
       let url = "https://comick.io/search?q="+mangaNameUrl;
       window.open(url, '_blank');
   } else if (mediaType == "movie") {
-        window.alert("You need to reenter your media as Pirate Bay uses a database...");
-        window.open('https://ww1.thepiratebay3.co/s/') //if not an anime then opens pirate bay for the user
+        let movieName = searchTerm.replace(/ /g, "-");
+        if (confirm("Click confirm for torrents, otherwise click other option")) {
+            window.alert("VPN recommended (You need to reenter your media as Pirate Bay uses a database...)");
+            window.open('https://ww1.thepiratebay3.co/s/') //if not an anime then opens pirate bay for the user
+        } else {
+            let url = 'https://movies2watch.tv/search/'+movieName;
+            window.open(url, '_blank')
+        }
   } else if (mediaType == "tv") {
-      //Replace the animeName spaces with + so it fits the format for 1337x.to
-      let tvName = searchTerm.replace(/ /g, "+");
       //Our torrent website
-      let url = 'https://1337x.to/category-search/'+tvName+'/TV/1/';
-      window.open(url, '_blank');
+      if (confirm("Click confirm for torrents, otherwise click other option")) {
+        //Replace the animeName spaces with + so it fits the format for 1337x.to
+        let tvName = searchTerm.replace(/ /g, "+");
+        window.alert("VPN recommended");
+        let url = 'https://1337x.to/category-search/'+tvName+'/TV/1/';
+        window.open(url, '_blank');
+      } else {
+        let tvName = searchTerm.replace(/ /g, "-");
+        let url = "https://movies2watch.tv/search/"+tvName;
+        window.open(url, '_blank');
+      }
   } else if (mediaType == "anime") {
     let animeNameUrl = searchTerm.replace(/ /g, "+")
     let url = "https://hianime.to/search?keyword="+animeNameUrl;
