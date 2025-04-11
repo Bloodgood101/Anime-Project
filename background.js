@@ -30,9 +30,9 @@ const mediaType = document.getElementById('mediaType').value;
         window.open('https://ww1.thepiratebay3.co/s/') //if not an anime then opens pirate bay for the user
   } else if (mediaType == "tv") {
       //Replace the animeName spaces with + so it fits the format for 1337x.to
-      let animeNameUrl = searchTerm.replace(/ /g, "+");
+      let tvName = searchTerm.replace(/ /g, "+");
       //Our torrent website
-      let url = 'https://1337x.to/search/'+animeNameUrl+'/1/';
+      let url = 'https://1337x.to/category-search/'+tvName+'/TV/1/';
       window.open(url, '_blank');
   } else if (mediaType == "anime") {
     let animeNameUrl = searchTerm.replace(/ /g, "+")
