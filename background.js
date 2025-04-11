@@ -55,7 +55,7 @@ const mediaType = document.getElementById('mediaType').value;
       let gameNameUrl = searchTerm.replace(/ /g, "-");
       //if the game is on console it will go through the nested if statements
       if (confirm("Click left option for PC, right for console")) {
-        if (confirm("left for disc, right for digital.")) {
+        if (confirm("left for digital, right for disc.")) {
             let url = 'https://www.amazon.co.uk/s?k='+gameNameUrl;
             window.open(url, '_blank');
         } else {
