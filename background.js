@@ -23,7 +23,7 @@ const mediaType = document.getElementById('mediaType').value;
   //the searching process
   if (mediaType == "manga") {
       let mangaNameUrl = searchTerm.replace(/ /g, "%20");
-      let url = "https://comick.io/search?q="+mangaNameUrl;
+      let url = "https://comick.live/search?q="+mangaNameUrl;
       window.open(url, '_blank');
   } else if (mediaType == "movie") {
         let movieName = searchTerm.replace(/ /g, "-");
@@ -55,7 +55,7 @@ const mediaType = document.getElementById('mediaType').value;
       let gameNameUrl = searchTerm.replace(/ /g, "-");
       //if the game is on console it will go through the nested if statements
       if (confirm("Click left option for PC, right for console")) {
-        if (confirm("left for digital, right for disc.")) {
+        if (confirm("left for dig1ital, right for disc.")) {
             let url = 'https://www.amazon.co.uk/s?k='+gameNameUrl;
             window.open(url, '_blank');
         } else {
