@@ -31,6 +31,7 @@ const mediaType = document.getElementById('mediaType').value;
             window.alert("VPN recommended (You need to reenter your media as Pirate Bay uses a database...)");
             window.open('https://ww1.thepiratebay3.co/s/') //if not an anime then opens pirate bay for the user
         } else {
+            window.alert("VPN recommended");
             let url = 'https://movies2watch.tv/search/'+movieName;
             window.open(url, '_blank')
         }
@@ -45,6 +46,7 @@ const mediaType = document.getElementById('mediaType').value;
       } else {
         let tvName = searchTerm.replace(/ /g, "-");
         let url = "https://movies2watch.tv/search/"+tvName;
+        window.alert("VPN recommended");
         window.open(url, '_blank');
       }
   } else if (mediaType == "anime") {
