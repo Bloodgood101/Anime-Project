@@ -50,6 +50,7 @@ const mediaType = document.getElementById('mediaType').value;
   } else if (mediaType == "anime") {
     let animeNameUrl = searchTerm.replace(/ /g, "+")
     let url = "https://hianime.to/search?keyword="+animeNameUrl;
+    window.alert("VPN recommended");
     window.open(url, '_blank');
   } else if (mediaType == "game") {
       let gameNameUrl = searchTerm.replace(/ /g, "-");
