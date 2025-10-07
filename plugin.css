@@ -1,8 +1,63 @@
+/* Add terminal font */
+body {
+  font-family: 'Share+Tech+Mono', monospace;
+  background-color: #000;
+  color: #0f0; /* Classic terminal green */
+}
+
 h1 {
-    color: darkred;
-    align-items: center;
+  align-items: center;
+  color: #0f0; /* Ensure heading matches terminal theme */
 }
 
 .button-container {
   display: flex;
+}
+
+/* Optional: Add more terminal-like styling */
+#searchForm {
+  border: 1px solid #0f0;
+  padding: 10px;
+}
+
+input, select {
+  background-color: #000;
+  color: #0f0;
+  border: 1px solid #0f0;
+  font-family: 'Share+Tech+Mono', monospace;
+}
+
+input {
+  color: white; 
+}
+
+button {
+  font-family: 'Share+Tech+Mono', monospace;
+  background-color: #000;
+  color: #0f0;
+  border: 1px solid #0f0;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.08s ease;
+}
+
+button:active {
+  transform: scale(0.95);
+  background-color: #0f0;
+  color: #000;
+}
+
+.form-btn {
+  font-family: 'Share+Tech+Mono', monospace;
+  background-color: #000;
+  border: 1px solid #0f0;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  width: 160px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
