@@ -22,8 +22,8 @@ const mediaType = document.getElementById('mediaType').value;
 
   //the searching process
   if (mediaType == "manga") {
-      let mangaNameUrl = searchTerm.replace(/ /g, "%20");
-      let url = "https://comick.live/search?q="+mangaNameUrl;
+      let mangaNameUrl = searchTerm.replace(/ /g, "+");
+      let url = "https://mangafire.to/filter?keyword="+mangaNameUrl;
       window.open(url, '_blank');
   } else if (mediaType == "movie") {
         let movieName = searchTerm.replace(/ /g, "-");
