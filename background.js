@@ -23,7 +23,7 @@ const mediaType = document.getElementById('mediaType').value;
   //the searching process
   if (mediaType == "manga") {
       let mangaNameUrl = searchTerm.replace(/ /g, "+");
-      let url = "https://mangafire.to/filter?keyword="+mangaNameUrl;
+      let url = "https://mangadex.org/search?q="+mangaNameUrl;
       window.open(url, '_blank');
   } else if (mediaType == "movie") {
         let movieName = searchTerm.replace(/ /g, "-");
