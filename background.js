@@ -1,3 +1,10 @@
+document.addEventListener('DOMContentLoaded', function() {
+  // Your existing DOMContentLoaded code
+  loadHistory();
+  
+  // Ensure body is visible (redundant but safe)
+  document.body.style.visibility = 'visible';
+});
 document.getElementById('searchForm').addEventListener('submit', async (e) => {
 //console.log(chrome) //test
 e.preventDefault();

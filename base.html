@@ -4,6 +4,12 @@
         <!script type="text/javascript" src="testing.js" defer><!/script>
         <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="plugin.css">
+        <style>
+            /* Prevent flash of unstyled content */
+            body:not(.loaded) {
+              visibility: hidden;
+            }
+        </style>
     </head>
     <body>
         <h1>Welcome back you bot</h1>
@@ -27,5 +33,11 @@
         </form>
         <div id="history"></div>
         <script type="text/javascript" src="background.js" defer></script>
+        <script>
+            // Mark body as loaded to prevent FOUC
+            document.addEventListener('DOMContentLoaded', function() {
+              document.body.classList.add('loaded');
+            });
+        </script>
     </body>
 </html>
