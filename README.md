@@ -3,3 +3,4 @@ Before using this plugin you must first edit your extensions on Chrome for it to
 2. Click 'Load unpacked'
 3. Click the, extracted, folder that you downloaded
 4. You're good to go!
+I consistently update the webscraping functions to make sure each website is secure and up-to-date
