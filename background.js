@@ -57,7 +57,7 @@ document.getElementById('searchForm').addEventListener('submit', async (e) => {
       }
   } else if (mediaType == "anime") {
     let animeNameUrl = searchTerm.replace(/ /g, "+")
-    let url = "https://hianime.lc/?s="+animeNameUrl;
+    let url = "https://hianime.ph/?s="+animeNameUrl;
     window.alert("VPN recommended");
     window.open(url, '_blank');
   } else if (mediaType == "game") {
