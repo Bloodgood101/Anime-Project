@@ -1,23 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
+  document.body.classList.add('loaded');
   // Your existing DOMContentLoaded code
   loadHistory();
-  
-  // Ensure body is visible (redundant but safe)
-  document.body.style.visibility = 'visible';
 });
 document.getElementById('searchForm').addEventListener('submit', async (e) => {
-//console.log(chrome) //test
-e.preventDefault();
-const searchTerm = document.getElementById('searchTerm').value;
-const mediaType = document.getElementById('mediaType').value;
+  //console.log(chrome) //test
+  e.preventDefault();
+  const searchTerm = document.getElementById('searchTerm').value;
+  const mediaType = document.getElementById('mediaType').value;
 
- // Generate unique ID and timestamp
- const searchEntry = {
-    id: Date.now().toString(),
-    searchTerm,
-    mediaType,
-    timestamp: new Date().toISOString(),
-    metadata: {} // Add barcode/ISBN data here if needed
+  // Generate unique ID and timestamp
+  const searchEntry = {
+      id: Date.now().toString(),
+      searchTerm,
+      mediaType,
+      timestamp: new Date().toISOString(),
+      metadata: {} // Add barcode/ISBN data here if needed
  };
 
  // Save to storage
@@ -33,13 +31,14 @@ const mediaType = document.getElementById('mediaType').value;
       let url = "https://mangadex.org/search?q="+mangaNameUrl;
       window.open(url, '_blank');
   } else if (mediaType == "movie") {
-        let movieName = searchTerm.replace(/ /g, "-");
         if (confirm("Click confirm for torrents, otherwise click other option")) {
+            let movieName = searchTerm.replace(/ /g, "-");
             window.alert("VPN recommended (You need to reenter your media as Pirate Bay uses a database...)");
-            window.open('https://ww1.thepiratebay3.co/s/') //if not an anime then opens pirate bay for the user
+            window.open('https://ww1.thepiratebay3.co/s/') //if not an anime then opens pirate bay for the user, specifically for films
         } else {
+            let movieName = searchTerm.replace(/ /g, "%20");
             window.alert("VPN recommended");
-            let url = 'https://movies2watch.tv/search/'+movieName;
+            let url = 'https://www.flixmomo.tv/search?q='+movieName;
             window.open(url, '_blank')
         }
   } else if (mediaType == "tv") {
@@ -51,14 +50,14 @@ const mediaType = document.getElementById('mediaType').value;
         let url = 'https://1337x.to/category-search/'+tvName+'/TV/1/';
         window.open(url, '_blank');
       } else {
-        let tvName = searchTerm.replace(/ /g, "-");
-        let url = "https://movies2watch.tv/search/"+tvName;
+        let tvName = searchTerm.replace(/ /g, "%20");
+        let url = "https://www.flixmomo.tv/search?q="+tvName;
         window.alert("VPN recommended");
         window.open(url, '_blank');
       }
   } else if (mediaType == "anime") {
     let animeNameUrl = searchTerm.replace(/ /g, "+")
-    let url = "https://hianime.to/search?keyword="+animeNameUrl;
+    let url = "https://hianime.lc/?s="+animeNameUrl;
     window.alert("VPN recommended");
     window.open(url, '_blank');
   } else if (mediaType == "game") {
